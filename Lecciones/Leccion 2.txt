@@ -1,0 +1,307 @@
+Leccion 2 
+
+correr comandos en caliente:
+
+ipython: 
+
+pip install ipython
+
+
+Booleanos: 
+
+true 
+false
+
+producto -> and  ->&
+suma -> or -> | 
+negacion -> not
+
+Ejemplo:
+
+In [2]: a = True
+
+In [3]: b = False
+
+In [4]: a | b
+Out[4]: True
+
+In [5]: a & b
+Out[5]: False
+
+In [6]: not b
+Out[6]: True
+
+Ejercicio:
+In [7]: asisto = True
+
+In [8]: hago_tarea = True
+
+In [9]: examen = True
+
+In [10]: pasa = asisto & hago_tarea & examen
+
+In [11]: pasa
+Out[11]: True
+
+In [12]: examen = False
+
+In [13]: pasa = asisto & hago_tarea & examen
+
+In [14]: pasa
+Out[14]: False
+
+Valor None: 
+
+In [15]: examen = None
+
+In [16]: pasa = asisto & hago_tarea & examen
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-16-8ffb05abf095> in <module>
+----> 1 pasa = asisto & hago_tarea & examen
+
+TypeError: unsupported operand type(s) for &: 'bool' and 'NoneType'
+
+Valor "0" : 
+In [15]: examen = None
+
+In [16]: pasa = asisto & hago_tarea & examen
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-16-8ffb05abf095> in <module>
+----> 1 pasa = asisto & hago_tarea & examen
+
+TypeError: unsupported operand type(s) for &: 'bool' and 'NoneType'
+
+* cero es considerado como falso.
+
+Condicional:
+	|
+	|
+	|			Expresion
+	|			 ^
+	|			 |
+	|--> -> if _____ :
+				
+				else:
+
+Ejemplo de Condicional:
+
+In [22]: if asisto & hago_tarea & examen:
+    ...:     pass
+
+* palabra reservada: pass	
+
+In [23]: if asisto & hago_tarea & examen:
+    ...:     pass
+    ...:     print ("pasaste!1")
+    ...:     pass
+    ...: else:
+    ...:           print("no pasaste!")
+    ...:
+no pasaste!
+
+In [24]: examen
+Out[24]: 0
+
+In [23]: if asisto & hago_tarea & examen:
+    ...:     pass
+    ...:     print ("pasaste!1")
+    ...:     pass
+    ...: else:
+    ...:           print("no pasaste!")
+    ...:
+no pasaste!
+
+In [25]: examen = 1
+
+In [26]: if asisto & hago_tarea & examen:
+    ...:     pass
+    ...:     print ("pasaste!1")
+    ...:     pass
+    ...: else:
+    ...:           print("no pasaste!")
+    ...:
+pasaste!1		
+
+
+if , elif 
+
+In [27]: if hago_tarea:
+    ...:     print('hago la tarea')
+    ...: elif examen:
+    ...:     pass
+    ...:
+hago la tarea
+
+* Más de dos alternativas: if ... elif ... else ...
+La estructura de control if ... elif ... else ... permite encadenar varias condiciones. elif es una contracción de else if. La orden en Python se escribe así:
+
+if condición_1:
+    bloque 1
+elif condición_2:
+    bloque 2
+else:
+    bloque 3
+	
+Si se cumple la condición 1, se ejecuta el bloque 1
+Si no se cumple la condición 1 pero sí que se cumple la condición 2, se ejecuta el bloque 2
+Si no se cumplen ni la condición 1 ni la condición 2, se ejecuta el bloque 3.
+
+
+Comparacion:
+
+==
+!=
+In [36]: a is None
+Out[36]: True
+
+In [37]: a is not None
+Out[37]: False
+
+
+Listas []
+
+In [38]: len(["a",a,None,10,0,"0"])
+Out[38]: 6
+
+In [39]: list = ["a",a,None,10,0,"0"]
+
+In [40]: list
+Out[40]: ['a', None, None, 10, 0, '0']
+
+x in s
+x not in s
+
+In [42]: [] in [1,2,[]]
+Out[42]: True
+
+In [43]: a in ["a",a,1,2]
+Out[43]: True
+
+In [44]: a in ["a",0,1,2]
+Out[44]: False
+
+a + b
+In [50]: a = [1234]
+
+In [51]: b=[1,2,3,4]
+
+In [52]: a + b
+Out[52]: [1234, 1, 2, 3, 4]
+
+n * s or s * n
+
+In [53]: a * 5
+Out[53]: [1234, 1234, 1234, 1234, 1234]
+
+s[i]
+
+In [54]: a[0]
+Out[54]: 1234
+
+In [55]: b[0]
+Out[55]: 1
+
+In [56]: b[-1]
+Out[56]: 4
+
+
+s[i:j] or s[i:j:k]
+
+In [64]: huevos = [1,2,3,4,5,6,7,8,9]
+In [67]: huevos[3:9:8]
+Out[67]: [4]
+
+In [68]: huevos[:]
+Out[68]: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [69]: huevos[2:]
+Out[69]: [3, 4, 5, 6, 7, 8, 9]
+
+In [70]: huevos[:4]
+Out[70]: [1, 2, 3, 4]
+
+In [71]: huevos[-1:]
+Out[71]: [9]
+
+In [72]: huevos[:-1]
+Out[72]: [1, 2, 3, 4, 5, 6, 7, 8]
+
+In [72]: huevos[:-1]
+Out[72]: [1, 2, 3, 4, 5, 6, 7, 8]
+
+In [73]: huevos[::]
+Out[73]: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [74]: huevos[::-1]
+Out[74]: [9, 8, 7, 6, 5, 4, 3, 2, 1] --> Lista inversa
+
+In [75]: huevos[::0]
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-75-57585ff501d9> in <module>
+----> 1 huevos[::0]
+
+ValueError: slice step cannot be zero
+
+In [76]: huevos[:0]
+Out[76]: []
+
+In [77]: huevos[0:0]
+Out[77]: []
+
+In [78]: huevos[0:]
+Out[78]: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [79]: huevos[::2]  --> Elementos pares de una lista
+Out[79]: [1, 3, 5, 7, 9]
+
+In [83]: huevos[1::2]
+Out[83]: [2, 4, 6, 8]  --> numeros impares
+
+min(s) & max(s)
+
+In [88]: min(huevos)
+Out[88]: 1
+
+In [89]: max(huevos)
+Out[89]: 9
+
+In [92]: callos = ["a","be","ce","de"]
+
+In [93]: min(callos)
+Out[93]: 'a'
+
+In [94]: callos = ["a","be","ce","de",1]
+
+In [95]: min(callos)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-95-ba170202600b> in <module>
+----> 1 min(callos)
+
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+s.index(x[,i[,j]]) & s.count(x)
+
+In [103]: huevos.index(4)
+Out[103]: 3
+
+In [104]: huevos.count(4)
+Out[104]: 1
+
+huevos.append()
+In [105]: huevos.append(2)
+
+In [106]: huevos
+Out[106]: [1, 2, 3, 4, 5, 6, 7, 8, 9, 2]
+
+In [112]: huevos [3:4] = [20,45]---> reemplazo <--- 
+In [113]: huevos
+Out[113]: [2, 9, 8, 20, 45, 5, 4, 3, 2, 1]
+
+borrar contenido de lista:
+
+del huevos [:]
+
