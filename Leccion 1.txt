@@ -1,0 +1,122 @@
+Distribuciones:
+
+Python.org
+Anaconda.org
+
+
+PIP- administrador de paquetes.
+
+
+Reglas para Python: 
+
+- Identacion
+- Autocontenido.
+
+Comandos: 
+
+Print - enviar informacion a consola.
+	ejemplo: print ()
+		
+		py 2.x print "Hola"
+		py 3.x print ("Hola")
+		
+Input - almacena en memoria.
+	ejemplo 1:
+		>>> mi_variable = input("porfavor ponga su nombre")
+		porfavor ponga su nombreDaniel
+		>>> mi_variable
+		'Daniel'
+		
+	ejemplo 2:
+		>>> precio= input("porfavor digite el precio de su articulo:")
+		porfavor digite el precio de su articulo:20000
+		>>> precio
+		'20000'
+		>>> precio = int(precio)  -> integer para comvertir el string en un numero.
+		>>> precio
+		20000
+		
+type(precio)   --> saber que tipo es la variable
+		>>> type(precio)
+		<class 'int'>  -> precio es un integer.
+		
+help (type)  --> comando de ayuda.
+
+
+operadores algebraicos: suma, resta, multiplicacion, exponentes, division, modulos.
+
+
+Suma: 
+	>>> 10+20
+	30
+	>>> 30-10
+	20
+	
+resta:
+	>>> 10-5
+	5
+	
+multiplicacion:
+	>>> 20*4
+	80
+	
+Division:
+	>>> 10/2
+	5.0
+	>>> 10//2
+	5
+
+Potencia:
+	>>> 2**8
+	256
+
+operadores algebraicos con strings:
+	>>> a = "hola"
+	>>> a
+	'hola'
+	>>> b = "mundo"
+	>>> a = b
+	>>> a + b
+	'mundomundo'
+	>>> a*10
+	'mundomundomundomundomundomundomundomundomundomundo'
+	>>> a = "hola"
+	>>> a + b
+	'holamundo'  -- > concatenacion.
+
+len () - > cantidad de elementos de una conexion.
+	>>> len (a)
+	4
+
+
+del  -> comando para borrar variable.
+	>>> del (a)
+	>>> a
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	NameError: name 'a' is not defined
+	
+	
+a = None -> palabra reservada. igual a Null en otros lenguajes.
+
+Asignamientos:
+
+>>> a = ''
+>>> a
+''
+>>> a = ""
+>>> a
+''
+>>> a = None
+>>> a
+>>> type (a)
+<class 'NoneType'>
+>>>
+
+Serializacion: 
+	https://programacion.net/articulo/los_pickles_de_python_1860
+
+id () -> identificador de memoria.
+			>>> id (a)
+			140720917605600
+
